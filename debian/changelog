@@ -1,5 +1,6 @@
-mtt (1.0-1) unstable; urgency=low
+mtt (1.0) unstable; urgency=low
 
+  * Prepared script for running from /usr.
   * Debianized. 
 
  -- Casey Parker <parker.casey@gmail.com>  Sat, 26 Dec 2015 23:19:02 -0800
