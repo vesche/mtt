@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # movietv.to scraper command line utility
 
 import click
