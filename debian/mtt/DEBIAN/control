@@ -1,0 +1,12 @@
+Package: mtt
+Version: 1.0-1
+Architecture: all
+Maintainer: Casey Parker <parker.casey@gmail.com>
+Installed-Size: 45
+Depends: python (>= 2.7), python-requests, python-bs4, python-beautifulsoup, python-click, vlc
+Section: python
+Priority: optional
+Description: utility for searching and playing from http://movietv.to.
+ Commandline utilty for searching and playing movies from http://movietv.to.
+ Daily restrictions are avoided, and the video is piped directly into VLC to
+ avoid flash.
