@@ -1,7 +1,0 @@
-#! /bin/sh
-set -e
-
-if [ "$1" = rtupdate ]; then
-	pyclean -p mtt /usr/lib/mtt
-	pycompile -p mtt -V 2.7- /usr/lib/mtt
-fi
