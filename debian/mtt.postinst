@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
-
-ln -s /usr/lib/mtt/mtt.py /usr/bin/mtt
+ln -s i/usr/lib/mtt/mtt.py /usr/bin/mtt
+#DEBHELPER#
