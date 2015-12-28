@@ -16,7 +16,8 @@ def cli():
 
 @cli.command()
 @click.option('--movie', help='Name of movie to find.')
-def run(movie):
+@click.option('--quality', type=click.Choice(['All', '720p', '1080p']), help='Quality of movies')
+def run(movie, quality):
     with requests.Session() as session:
         session.headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; \
         Linux x86_64; rv:42.0) Gecko/20100101 Firefox/42.0'}
@@ -38,7 +39,7 @@ def run(movie):
             'abc': 'All',
             'genres': '',
             'sortby': 'Popularity',
-            'quality': 'All',
+            'quality': quality,
             'type': 'movie',
             'q': movie,
             'token': token
@@ -47,12 +48,14 @@ def run(movie):
         soup = BeautifulSoup(response.content, 'html.parser')
 
         movie_links = []
+        movies = []
         for link in soup.find_all('a'):
             movie_links.append(link.get('href'))
+        for link in soup.find_all('h2'):
+            movies.append(link.text)
 
-        for n in range(len(movie_links)):
-            movie_name = movie_links[n]
-            print '{0}. {1}'.format(n+1, ' '.join(movie_name.split('-')[1:]))
+        for n in range(len(movies)):
+            print '{0}. {1}'.format(n+1, movies[n])
         movie_numb = click.prompt('Movie #?', type=int)
 
         response = session.get('http://movietv.to/{}'.format(movie_links[movie_numb-1]))
