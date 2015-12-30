@@ -11,10 +11,11 @@ Usage:
 Usage: mtt.py [OPTIONS]
 
 Options:
-  --movie TEXT  Name of movie to find.
-  --help        Show this message and exit.
+  --movie TEXT                Name of movie to find.
+  --quality [All|720p|1080p]  Quality of movies.
+  --help                      Show this message and exit.
 
-> python mtt.py --movie "Lord of the Rings"
+> python mtt.py --movie "Lord of the Rings" --quality All
 1. The Lord of the Rings: The Two Towers
 2. The Lord of the Rings: The Fellowship of the Ring
 3. The Lord of the Rings: The Return of the King

@@ -16,7 +16,7 @@ def cli():
 
 @cli.command()
 @click.option('--movie', help='Name of movie to find.')
-@click.option('--quality', type=click.Choice(['All', '720p', '1080p']), help='Quality of movies')
+@click.option('--quality', type=click.Choice(['All', '720p', '1080p']), help='Quality of movies.')
 def run(movie, quality):
     with requests.Session() as session:
         session.headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; \
@@ -63,7 +63,7 @@ def run(movie, quality):
 
         for stream in soup.find_all('source'):
             stream_link = stream.get('src')
-        stream_link = '&'.join(stream_link.split('&')[:2])
+        stream_link = '&'.join(stream_link.split('&')[:3])
 
         if sys.platform == 'win32':
             subprocess.Popen(['C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe', stream_link])
