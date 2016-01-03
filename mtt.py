@@ -62,7 +62,10 @@ def run(movie):
         stream_link = '&'.join(stream_link.split('&')[:3])
 
         if sys.platform == 'win32':
-            subprocess.Popen(['C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe', stream_link])
+            try:
+                subprocess.Popen(['C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe', stream_link])
+            except:
+                subprocess.Popen(['C:\\Program Files\\VideoLAN\\VLC\\vlc.exe', stream_link])
         else:
             subprocess.Popen(['vlc', stream_link])
 
