@@ -1,0 +1,13 @@
+mtt (1.0.1) UNRELEASED; urgency=medium
+
+  * Added quality option.
+  * Cleaned up movie naming. 
+
+ -- Casey Parker <parker.casey@gmail.com>  Mon, 28 Dec 2015 13:14:07 -0800
+
+mtt (1.0.0) unstable; urgency=low
+
+  * Prepared script for running from /usr.
+  * Debianized. 
+
+ -- Casey Parker <parker.casey@gmail.com>  Sat, 26 Dec 2015 23:19:02 -0800
