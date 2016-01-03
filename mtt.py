@@ -59,7 +59,7 @@ def run(movie):
 
         for stream in soup.find_all('source'):
             stream_link = stream.get('src')
-        stream_link = '&'.join(stream_link.split('&')[:2])
+        stream_link = '&'.join(stream_link.split('&')[:3])
 
         if sys.platform == 'win32':
             subprocess.Popen(['C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe', stream_link])
