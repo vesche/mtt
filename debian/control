@@ -2,25 +2,17 @@ Source: mtt
 Section: python
 Priority: optional
 Maintainer: Casey Parker <parker.casey@gmail.com>
-Build-Depends: debhelper (>= 9),
-               dh-python,
-               python-all (>= 2.7)
+Uploaders: Austin Jackson <austinjackson892@gmail.com>
+Build-Depends: debhelper (>= 9), dh-python, python-all (>= 2.7)
 Standards-Version: 3.9.6
+Vcs-Browser: https://github.com/vesche/mtt
+Vcs-Git: https://github.com/vesche/mtt.git
 X-Python-Version: >= 2.7
-#Vcs-Git: https://github.com/vesche/mtt.git
-#Vcs-Browser: https://github.com/vesche/mtt
 
 Package: mtt
 Architecture: all
-Depends: ${misc:Depends},
-               python (>= 2.7),
-               python-requests,
-               python-bs4,
-               python-beautifulsoup,
-               python-click,
-               vlc
-Description: utility for searching and playing from http://movietv.to.
- Commandline utilty for searching and playing movies from http://movietv.to.
+Depends: ${misc:Depends}, python (>= 2.7), python-requests, python-bs4, python-beautifulsoup, python-click, vlc
+Description: Utility for searching and playing from http://movietv.to.
+ Command line utilty for searching and playing movies from http://movietv.to.
  Daily restrictions are avoided, and the video is piped directly into VLC to
  avoid flash.
- .
