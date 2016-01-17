@@ -20,7 +20,8 @@ def cli():
 def run(movie, quality):
     with requests.Session() as session:
         session.headers = {'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; \
-        Linux x86_64; rv:42.0) Gecko/20100101 Firefox/42.0'}
+        Linux x86_64; rv:42.0) Gecko/20100101 Firefox/42.0', \
+        'X-Requested-With': 'XMLHttpRequest'}
 
         # extract token
         response = session.get('http://movietv.to/')
