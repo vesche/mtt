@@ -1,4 +1,7 @@
 # mtt.py
+
+**This utility no longer works as movietv.to has become paywalled. I'll leave it here as it may help someone in the future to create a python script for scraping flash video.**
+
 Command line utility for searching and playing movies from http://movietv.to. Daily restrictions are avoided, and the video is piped directly into VLC to avoid flash. Tested on Windows and Linux.  
 
 Dependencies (Python 2.7, VLC):  
